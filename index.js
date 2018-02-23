@@ -5,16 +5,16 @@
 // AppRegistry.registerComponent('albums', () => App);
 
 
-//Explained in tutorial
 // Import a library to help create a component
 import React from 'react';
 // import ReactNative from 'react-native';
 //Import destructuring
 //Will need to learn what's in the React lib
-import { Text, AppRegistry } from 'react-native';
+import { AppRegistry, View } from 'react-native';
 //importing an exported component
 //after importing, nest it in the component below
  import Header from './src/components/header';
+ import AlbumList from './src/components/AlbumList';
 
 // Create a component
 //Every variable must be defined, there are no global variables in ReactNative
@@ -29,7 +29,10 @@ import { Text, AppRegistry } from 'react-native';
 //This is a refactored version of the above
 //Empty components are self-closing, hence <Header />
 const App = () => (
-  <Header />
+  <View>
+    <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
 );
 
 // Render it to the device
