@@ -1,13 +1,16 @@
-//CAN PROBABLY DELETE THIS FILE
+// Import a library to help create a component
+import React from 'react';
+import { Text, AppRegistry } from 'react-native';
+import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
-// // Import a library to help create a component
-// import React from 'react';
-// import { Text, AppRegistry } from 'react-native';
-//
-// // Create a component
-// const App = () => (
-//   <Text>Some Text</Text>
-// );
-//
-// // Render it to the device
-// AppRegistry.registerComponent('albums', () => App);
+// Create a component
+const App = () => (
+  <View>
+    <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
+);
+
+// Render it to the device
+AppRegistry.registerComponent('albums', () => App);
